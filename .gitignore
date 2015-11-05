@@ -1,0 +1,15 @@
+# Vagrant
+.vagrant
+
+# osx
+.DS_Store
+
+# python
+.pyc
+
+# lib
+app/node_modules
+puppet/modules
+
+# log
+app/npm-debug.log
