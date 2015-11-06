@@ -13,3 +13,6 @@ puppet/modules
 
 # log
 app/npm-debug.log
+
+# build
+app/public/build/*

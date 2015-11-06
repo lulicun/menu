@@ -56,7 +56,7 @@ fi
 # echo "node: $(program_is_installed node)"
 function program_is_installed {
   # set to 1 initially
-  local return_=true
+  local return_=1
   # set to 0 if not found
   type $1 >/dev/null 2>&1 || { local return_=0; }
   # return value
@@ -76,10 +76,10 @@ function npm_package_is_installed {
 }
 
 #Install node
-if ! program_is_installed node; then
+if (((program_is_installed node) == 1)); then
+    echo 'Node already installed'
+else
     curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
     apt-get update
     apt-get install -y nodejs
-else
-    echo 'Node already installed'
 fi
