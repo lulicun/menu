@@ -76,10 +76,15 @@ function npm_package_is_installed {
 }
 
 #Install node
-if (((program_is_installed node) == 1)); then
+function install_node {
+  if [ $1 == 1 ]; then
     echo 'Node already installed'
-else
+  else
+    echo 'Installing node'
     curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
     apt-get update
     apt-get install -y nodejs
-fi
+  fi
+}
+
+install_node $(program_is_installed node)
