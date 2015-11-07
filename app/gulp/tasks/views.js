@@ -11,12 +11,10 @@ gulp.task('views', function() {
   gulp.src(config.views.index)
     .pipe(gulp.dest(config.buildDir));
 
-  // Process any other view files from app/views
+  // Process any other view files from public/views
   return gulp.src(config.views.src)
     .pipe(templateCache({
       standalone: true
     }))
-    .pipe(gulp.dest(config.views.dest))
-    .pipe(browserSync.stream({ once: true }));
-
+    .pipe(gulp.dest(config.views.dest));
 });

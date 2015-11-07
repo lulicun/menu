@@ -12,20 +12,20 @@ module.exports = {
 
   styles: {
     src: 'public/styles/**/*.scss',
-    dest: 'build/css',
+    dest: 'public/build/css',
     prodSourcemap: false,
     sassIncludePaths: []
   },
 
   images: {
     src: 'public/images/**/*',
-    dest: 'build/images'
+    dest: 'public/build/images'
   },
 
   views: {
     index: 'public/index.html',
     src: 'public/views/**/*.html',
-    dest: 'public/js'
+    dest: 'public/build/js'
   },
 
   fonts: {
