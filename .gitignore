@@ -8,8 +8,9 @@
 .pyc
 
 # lib
-app/node_modules
 puppet/modules
+app/node_modules
+app/public/bower_components
 
 # log
 app/npm-debug.log
