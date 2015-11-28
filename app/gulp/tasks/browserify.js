@@ -32,7 +32,7 @@ function buildScript(file) {
 
     bundler.on('update', function() {
       rebundle();
-      gutil.log('Rebundle...');
+      gutil.log('Rebundle done');
     });
   }
 

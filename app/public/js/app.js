@@ -1,4 +1,28 @@
-var angular = require('angular');
+'use strict';
 
-console.log("hello");
-console.log("come on");
+var angular = require('angular');
+var ui_router = require('angular-ui-router');
+var ui_bootstrap = require('angular-ui-bootstrap');
+
+var HeaderCtrl = require('./controllers/headerCtrl');
+
+var app = angular.module('menu-app', [ui_router, ui_bootstrap]);
+
+
+
+app.config(function($stateProvider, $urlRouterProvider) {
+
+    $urlRouterProvider.otherwise('/');
+
+    $stateProvider.state('app', {
+        url: '/',
+        views: {
+            'header': {
+                templateUrl: 'views/header.html',
+                controller: 'HeaderCtrl'
+            }
+        }
+    });
+});
+
+app.controller('HeaderCtrl', ['$scope', HeaderCtrl]);
