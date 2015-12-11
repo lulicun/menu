@@ -20,6 +20,12 @@ app.config(function($stateProvider, $urlRouterProvider) {
             'header': {
                 templateUrl: 'views/header.html',
                 controller: 'HeaderCtrl'
+            },
+            'content': {
+                templateUrl: 'views/home.html'
+            },
+            'footer': {
+                templateUrl: 'views/footer.html'
             }
         }
     });
